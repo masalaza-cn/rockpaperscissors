@@ -1,125 +1,106 @@
-# Rock Paper Scissors Project
+# Playlist Project - with HTML/CSS Starter Code
 
 ## Overview:
 
-In this unit, coders will create a Rock, Paper, Scissors game. The Rock, Paper, Scissors game will take user choice, generate a computer choice, and display the winner to the screen. Then, coders will refactor their working project to add functions. To create this project, coders will use jQuery to take user input and display data, the Math Library to generate a random choice, and conditionals to determine the winner.
+In this unit, coders will create a Playlist. The Playlist will display a list of information about different songs with images and links to play the songs. To create this project, coders will create arrays to hold song information, use a for of loop to iterate over the arrays, and display data to the screen. They will use .push to add new songs to their playlist. Then, students will refactor their project to using objects instead of arrays to hold their data.
 
 ## Day 1
 
-### Day 1 Goal 1: Set up
+## Day 1 Goal 1: Set Up
 
 #### Planning
 
-- [ ] Complete the project planning document
+- [ ] Complete the project planning document.
 
 #### GitHub Set-Up
 
-- [x] Go to the repository at https://github.com/itscodenation/rockpaperscissors
-- [ ] Fork this repository to your Github account and import to a new workspace
-- [ ] Link and commit your changes
-- [ ] Make your site live on GitHub Pages
+- [x] Go to the repository
+- [ ] Fork this repository to your github account and import to a new workspace
+- [ ] Submit your website using the link on the Agenda
 
-#### Code Walkthrough
+#### Starter Code
 
-- [ ] Read through the starter code given so you understand how the HTML is organized
+- [ ] Read through the HTML starter code to understand the organization and class names given.
+- [ ] Read through the JavaScript starter code to determine where each given function is declared and where each given function is called.
 
-### Day 1 Goal 2: Capture user input and display it to the screen
+### Day 1 Goal 2: Write the code to store your song titles in JavaScript
 
-- [ ] Add a click handler that saves the value of the user's input to a variable
-- [ ] Display the user input value on the screen, in the user choice location
+- [ ] Create and populate an array to store your song names
+
+### Day 1 Goal 3: Write the code to store the rest of your song information in JavaScript
+
+- [ ] Create and populate arrays to store your song artists, images, and links.
 
 #### Wrap
 
-- [ ] Commit your changes!
+- [ ] Push your changes!
 
 ## Day 2
 
-### Day 2 Goal 1: Generate a new random number every time the user clicks the button
+### Day 2 Goal 1: Write the code to display your song titles on the page
 
-- [ ] Outside of your click handler, declare a randomNumber variable and set it equal to 0
-- [ ] In your click handler, generate a random number and assign it to the randomNumber variable
+- [ ] Create a loop that loops through your song name array and displays your song names in the correct div
 
-### Day 2 Goal 2: Display the random number to the screen
+### Day 2 Goal 2: Write the code to display the rest of your song information
 
-- [ ] Display the randomNumber value on the screen, in the computer choice location
+- [ ] Create loops that loop through your song artists, images, and links arrays and display the information in the correct divs.
 
 #### Wrap
 
-- [ ] Commit your changes!
+- [ ] Push your changes!
 
 ## Day 3
 
-### Day 3 Goal 1: Assign different computer choices depending on the random number
+### Day 3 Goal 1: Write the code to allow users to add additional songs to your playlist
 
-- [ ] Write a conditional statement which, given the number range of randomNumber, assigns ‘rock’, ‘paper’ or ‘scissors’ to a computerChoice variable
-- [ ] Update the computer choice location so it displays the computerChoice to the screen
+- [ ] Declare a variable and save the value of the user input with class `song`
+- [ ] Use `.push()` to add the value to your song name array.
 
-### Day 3 Goal 2: Increase user experience (BONUS!)
+### Day 3 Goal 2: Write the code to allow users to add additional song information to your playlist
 
-- [ ] Test for edge cases by ensuring that a result appears if the user does not type an acceptable input
+- [ ] Declare additional variables and save the values of each input tag
+- [ ] Use `.push()` to add each input value to the correct array
+
+#### Wrap
+
+- [ ] Push your changes!
 
 ## Day 4
 
-### Day 4 Goal 1: Compare the user choice and computer choice to determine a winner
+### Day 4 Goal 1: Refactor your arrays so all your song information is stored in Objects
 
-- [ ] Write a compound conditional statement that compares the userChoice to the computerChoice
-- [ ] Declare a variable to save the winner of the game
-- [ ] Display the winner to the screen in the result div
-
-### Day 4 Goal 2: Increase user experience (BONUS!)
-
-- [ ] Test that your game performs correctly in case of a tie
-- [ ] Clear the input value once a result is displayed so your game is ready to play again
+- [ ] Comment out your arrays
+- [ ] Create an Object for each of your songs
+- [ ] Inside each Object, add key/value pairs to store the title, artist,image, and link
+- [ ] Store all your Objects in one array
 
 #### Wrap
 
-- [ ] Commit your changes!
+- [ ] Push your changes!
 
-#### Day 5
+## Day 5
 
-### Day 5 Goal 1: Create a function to handle your computer choice logic
+### Day 5 Goal 1: Refactor your loops so all your song information displays correctly on the page
 
-- [ ] Write a function called getRandomComputerChoice that does not accept any parameters and returns computerChoice
-- [ ] Move your `Math.random` inside your function
-- [ ] Move your conditional logic that determines the computer choice inside your function
-
-### Day 5 Goal 2: Call your getRandomComputerChoice function
-
-- [ ] Call your function inside your click handler so that it determines the value of your computerChoice variable
-  - [ ] HINT: Your getRandomComputerChoice function works correctly if it returns rock, paper, or scissors when called
+- [ ] Update your click handler so the input values are saved in as values in a new Object
+- [ ] Update your `.push()` so the input Object is added to your array of Objects
+- [ ] Update your loops based on your new array of Objects
 
 #### Wrap
 
-- [ ] Commit your changes!
+- [ ] Push your changes!
 
-#### Day 6
+## Project Extensions:
 
-### Day 6 Goal 1: Create a function to handle your winner logic
-
-- [ ] Write a function called chooseWinner that does accepts two parameters and returns winner
-- [ ] Move your compound conditional logic that determines the winner inside your function
-
-### Day 6 Goal 2: Call your chooseWinner function
-
-- [ ] Call your function inside your click handler so that it determines the value of your winner variable
-  - [ ] HINT: Your chooseWinner function works correctly if it returns "User wins!", "Computer wins!" or "No one wins!" when called
-
-#### Wrap
-
-- [ ] Commit your changes!
-
-## Projects Extensions:
-
-- [ ] Style the page to fit your personality
-- [ ] Validates input so that it will return “Not valid input” if the user types in a wrong choice.
-- [ ] Accepts any form of a word regardless of capitalization (i.e. “Rock” “rock” roCk”)
-- [ ] Keeps track of total wins and losses, until the page refreshes.
-- [ ] Create a game with more variety in throwing options. Example: [Rock-Paper-Scissors-Lizard-Spock](http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock)
+- [ ] Add in your own CSS to personalize your project
+- [ ] Use .length to display how many songs are on your list
+- [ ] Add a delete button to delete songs on your list
+- [ ] Refactor your project further by utilizing functions to simplify your code
+- [ ] Add a shuffle button and functionality
+- [ ] Use local storage to save your songs locally
 
 ## References/Tools
 
-- [Code Nation Reference Table]()
-- [Script Tag](http://javascript.crockford.com/script.html)
+- [Advanced Reference Table](https://docs.google.com/document/d/1SElvLDvtVOoYZJyR5XbCQJWbSTxyChDiQkz7n3c63Go/preview)
 - [How Jquery Works](http://learn.jquery.com/about-jquery/how-jquery-works/)
 - [JQuery Events](http://api.jquery.com/category/events/)
-- [Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
